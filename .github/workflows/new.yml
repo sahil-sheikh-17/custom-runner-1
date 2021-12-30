@@ -10,13 +10,13 @@ jobs:
 
     runs-on: ubuntu-latest
     
-    - name: building jar file
-        run: |
-          echo "HELLO THIS IS SAHIL" > hello.txt
+    steps:
+     - name: building jar file
+       run: echo "HELLO THIS IS SAHIL" > hello.txt
 
-      - name: Publish
-        uses: nogsantos/scp-deploy@master
-        with:
+     - name: Publish
+       uses: nogsantos/scp-deploy@master
+       with:
           src: hello.txt
           host: ${{ secrets.SSH_HOST }}
           remote: ${{ secrets.SSH_DIR }}
