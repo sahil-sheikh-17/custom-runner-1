@@ -8,7 +8,8 @@ on:
 jobs:
   ssh:
 
-    runs-on: ubuntu-latest
+  
+    runs-on: [runner1]
     
     steps:
      - name: building jar file
